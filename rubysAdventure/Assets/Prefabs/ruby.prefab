@@ -101,9 +101,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29c57efd9a2ccf4ea44c224240a7838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 0}
   speed: 3
   maxHealth: 5
+  projectilePrefab: {fileID: 4833591899620907343, guid: 6a96e8d67764e5f41b98882b0d2b7914, type: 3}
+  healthPickUpEffect: {fileID: 3577316230405909467, guid: 86f33e9a304c35446abb97a88118cc64, type: 3}
+  takeDamageEffect: {fileID: 2930495556659784105, guid: 06140d340eabc9140bb9f60e223cc170, type: 3}
+  throwSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
+  hitSound: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
   timeInvincible: 2
 --- !u!50 &5858307218359447333
 Rigidbody2D:
