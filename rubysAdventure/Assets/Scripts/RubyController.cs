@@ -37,6 +37,10 @@ public class RubyController : MonoBehaviour
 
     bool gameover = false;
     bool gamelost = false;
+
+    bool game_start = false;
+    float game_time = 0.0f;
+    float max_game_time = 60.0f;
     
     // Start is called before the first frame update
     void Start()
@@ -52,6 +56,19 @@ public class RubyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (game_start && !gameover)
+        {
+            game_time += Time.deltaTime;
+            UITimer.instance.UpdateTimer(game_time);
+
+            if (game_time >= max_game_time)
+            {
+                gameover = true;
+                gamelost = true;
+                UIGameOver.instance.LoseGame();
+            }
+        }
+
         if (gameover)
         {
             horizontal = 0;
@@ -91,7 +108,7 @@ public class RubyController : MonoBehaviour
             return;
         }
         
-        if(Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C) && game_start)
         {
             Launch();
         }
@@ -105,6 +122,7 @@ public class RubyController : MonoBehaviour
                 if (character != null)
                 {
                     character.DisplayDialog();
+                    game_start = true;
                 }
             }
         }

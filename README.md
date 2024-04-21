@@ -1,8 +1,15 @@
-README – Ruby’s Adventure
-Known issues – The health bar UI in the build is stretched, but still has functionality. I could not figure out a solution in time.
+# README – Ruby’s Adventure
+Team 2 – Grace Yip and Trinity Dearion.
 
-There were many challenges when doing the tutorial such as animations and coding issues, but a few tweaks would fix the issues.
+**When opening project from GitHub, clone the repo, open the project in Unity and select “MainScene” from Assets/Scenes.**
 
-When opening project from GitHub, clone the repo, open the project in Unity and select “MainScene” from Assets/Scenes.
+## Changes
+- Added audio note to initial NPC interaction 
 
-Teammate – Grace Yip. Things are going well.
+- Created “bobbing” animation for health pickups
+
+- Added timer 
+  - Starts after talking to NPC and stops when robots are fixed
+  - Disabled cog throwing til after talking to NPC
+  - After 60 seconds without objective completion, game over
+  - Changed NPC dialogue to tell player about timer
